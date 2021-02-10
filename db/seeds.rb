@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Airplane.destroy_all
+p1 = Airplane.create :name => 'plane1', :row => '23', :column => 'C'
+p2 = Airplane.create :name => 'plane1', :row => '21', :column => 'B'
+p3 = Airplane.create :name => 'plane1', :row => '27', :column => 'A'
+p4 = Airplane.create :name => 'plane1', :row => '33', :column => 'B'
+puts "#{ Airplane.count }"
+
+Flight.destroy_all
+f1 = Flight.create :number => 'Q423', :origin => 'Sydney', :destination => 'Perth', :date => '02/05/22'
+f2 = Flight.create :number => 'Q745', :origin => 'Melbourne', :destination => 'Hobart', :date => '02/05/22'
+f3 = Flight.create :number => 'Q535', :origin => 'Adelaide', :destination => 'Perth', :date => '02/05/22'
+f4 = Flight.create :number => 'Q773', :origin => 'Darwin', :destination => 'Brisbane', :date => '02/05/22'
+puts "#{ Flight.count }"
+
+#Associations
+puts "Airplanes and flights"
+p1.flights << f1
+p2.flights << f2
+p3.flights << f3
+p4.flights << f4
