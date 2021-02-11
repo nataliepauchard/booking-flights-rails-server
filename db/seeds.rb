@@ -8,10 +8,10 @@
 
 
 Airplane.destroy_all
-p1 = Airplane.create :name => 'plane1', :row => '23', :column => 'C'
-p2 = Airplane.create :name => 'plane1', :row => '21', :column => 'B'
-p3 = Airplane.create :name => 'plane1', :row => '27', :column => 'A'
-p4 = Airplane.create :name => 'plane1', :row => '33', :column => 'B'
+p1 = Airplane.create :name => 'plane1', :row => '23', :column => '6'
+p2 = Airplane.create :name => 'plane2', :row => '21', :column => '4'
+p3 = Airplane.create :name => 'plane3', :row => '27', :column => '6'
+p4 = Airplane.create :name => 'plane4', :row => '33', :column => '5'
 puts "#{ Airplane.count }"
 
 Flight.destroy_all
